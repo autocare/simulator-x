@@ -1,5 +1,3 @@
 <component name="CopyrightManager">
-  <settings default="The SIRIS Project">
-    <module2copyright />
-  </settings>
+  <settings default="The SIRIS Project" />
 </component>
