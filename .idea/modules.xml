@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/applications/basicexamples/basicexamples.iml" filepath="$PROJECT_DIR$/applications/basicexamples/basicexamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/editor/editor.iml" filepath="$PROJECT_DIR$/components/editor/editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/physics/jbullet/jbullet.iml" filepath="$PROJECT_DIR$/components/physics/jbullet/jbullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/renderer/jvr/jvr.iml" filepath="$PROJECT_DIR$/components/renderer/jvr/jvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/sound/lwjgl-sound/lwjgl-sound.iml" filepath="$PROJECT_DIR$/components/sound/lwjgl-sound/lwjgl-sound.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/ontology/generating/ontology-generator.iml" filepath="$PROJECT_DIR$/components/ontology/generating/ontology-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/io/vrpn/vrpn.iml" filepath="$PROJECT_DIR$/components/io/vrpn/vrpn.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link type="text/css" rel="stylesheet" href="markdown/markdown5.css"/>
+</head>
+<body>
+
+<p><a href="./simx-ReadMe.html">Back to Read Me</a></p>
+
+<figure>
+<img src="figures/simx-logo.png" alt="" id="simx-logo" title="simx-logo" style="width:4cm;" align="right" /></figure>
+
+
+
+<h1 id="simulatorx:gettingstarted">Simulator X: Getting Started</h1>
+
+<h2 id="tableofcontents">Table of Contents</h2>
+
+<ul>
+<li><a href="#settinguptheenvironment">Setting up the environment</a>
+
+<ul>
+<li><a href="#git">Git</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#intellij">IntelliJ</a></li>
+</ul></li>
+<li><a href="#settinguptheproject">Setting up the project</a></li>
+<li><a href="#exampleapplications">Example applications</a>
+
+<ul>
+<li><a href="#basicexample">Basic example</a></li>
+<li><a href="#clusterexample">Cluster example</a></li>
+</ul></li>
+<li><a href="./creating-components.html">Example components</a></li>
+</ul>
+
+<p><strong>Note:</strong>
+<em>The first time after you compiled the application (which takes a while!), it may come up with an ClassNotFoundException. In most cases the reason for this ist the fact that IntelliJ did not recognize the class file fast enough after SBT created it. Simply start the application again.</em></p>
+
+<p>Simulator X is an evolutionary platform for software technology research in the area of intelligent RIS. The current architecture incorporates some well known abstractions and good practices as well as some interesting experimental features [latoschik:2011]:</p>
+
+<ul>
+<li>Unified concurrency model based on actors.</li>
+<li>Shared entity model using a distributed state.</li>
+<li>Component architecture using the concurrency model.</li>
+<li>Functional/OOP approach based on Scala.</li>
+<li>Semantic binding for the integration of AI.</li>
+<li>Generic support for multimodal interfaces.</li>
+</ul>
+
+<h2 id="settinguptheenvironment">Setting up the environment</h2>
+
+<p>This section describes how to setup a system to obtain, built and run Simulator X to ultimately develop own applications. The Simulator X project is hosted at <a href="https://github.com">GitHub</a> and mainly developed using the programming language <a href="http://www.scala-lang.org">Scala</a> in conjuction with the IDE <a href="http://www.jetbrains.com/idea/">IntelliJ</a>. To compile and run the Scala code an installation of the Java Development Kit (JDK) is required. Considering all dependancies the supported operating systems are (at least) Windows (7 and 8), Linux and MacOSX (10.6 and later).</p>
+
+<h3 id="git">Git</h3>
+
+<p>The Simulator X project is hosted at <a href="https://github.com">GitHub</a> and can be accessed via the following project URL:</p>
+
+<p><a href="https://github.com/organizations/simulator-x">https://github.com/organizations/simulator-x</a></p>
+
+<p>To obtain the source code you will likely need to setup the version control system (VCS) git on your system. See for example GitHub&#8217;s <a href="https://help.github.com/articles/set-up-git">Getting Started</a> for help.</p>
+
+<h3 id="java">Java</h3>
+
+<p>Simulator X runs on the Java Virtual Machine (JVM). It is compatible with Oracles&#8217;s Java 6 on all supported operating systems. In addition it is compatible with Oracles&#8217;s Java 7 on Windows systems.</p>
+
+<p>To compile and run Simulator X you need the Java Development Kit (JDK) to be installed on you system and your <em>path</em> environment to be configured to contain your JDK&#8217;s <em>bin</em> folder (<em>E.g. you should be able to execute <code>java</code> and <code>javac</code> in a terminal if your configuration is right.</em>).</p>
+
+<h3 id="intellij">IntelliJ</h3>
+
+<p>The repository of Simulator X obtained from GitHub contains a preconfigured IntelliJ project as a easy starting point for the development own applications. In order to use this configuration you need to install at least the free community version of JetBrain&#8217;s IDE <a href="http://www.jetbrains.com/idea/index.html">IntelliJ IDEA</a> as well as the plugins <em>SBT</em> and <em>scala</em> (see JetBrain&#8217;s <a href="http://www.jetbrains.com/idea/plugins/index.html">plugin page</a> for a how-to). The IvyIDEA Plugin has to be configured to use the <a href="#ivy-default">default ivy settings</a>.</p>
+
+<figure>
+<img src="./figures/IvyIDEA-settings.png" alt="default ivy settings" id="ivy-default" title="IvyIDEA-settings" style="width:100%;" />
+<figcaption>default ivy settings</figcaption></figure>
+
+
+
+<h2 id="settinguptheproject">Setting up the project</h2>
+
+<p>First you need to download the project files. Go to <a href="https://github.com/organizations/simulator-x">Simulator X&#8217;s project page</a> and obtain the files via one of GitHub&#8217;s download alternatives. Store them at a nice place at your system (<em>Hint: Choosing a path containing no whitespaces or special characters prevents errors in some cases. In general any valid path should be fine.</em>)</p>
+
+<p>The files you downloaded contain a IntelliJ project. Open IntelliJ, select <em>Open Project</em> and choose the root folder of the files you just downloaded. The Simulator X project should load as a result, presenting you <a href="#intellij-default">IntelliJ&#8217;s default project view</a>.</p>
+
+<figure>
+<img src="figures/intellij-default.png" alt="IntelliJs default project view" id="intellij-default" title="intellij-default" style="width:100%;" />
+<figcaption>IntelliJ&#8217;s default project view</figcaption></figure>
+
+
+
+<p>You may need to add your Java SDK in the project settings menu (<em>File → Project Structure → SDKs</em>) and set this SDK as project SDK (<em>Project Settings → Project</em>). </p>
+
+<h2 id="exampleapplications">Example applications</h2>
+
+<p>The Simulator X project contains three demo applications to showcase the framework and to provide a starting point for development: A basic example, component examples and GenerateBasicExamplesSymbols, which generates Symbols from an online OWL ontology. To compile and execute these example applications simply select and run one of the preconfigured <a href="#run-cfgs">configurations</a> from the IntelliJ project (e.g. by clicking on the green &#8220;play button&#8221;).</p>
+
+<figure>
+<img src="figures/run-cfgs.png" alt="Run configurations" id="run-cfgs" title="run-cfgs" />
+<figcaption>Run configurations</figcaption></figure>
+
+
+
+<p>On the left side of <a href="#intellij-default">IntelliJ&#8217;s user interface</a> you see all modules the Simulator X IntelliJ project consist of. Besides basic functionality (like in <em>core</em>) or component implementations (like in <em>jbullet</em> for physics or <em>jvr</em> for graphics), the <em>basicexamples</em> module contains the before mentioned fundamental examples for Simulator X. </p>
+
+<h3 id="basicexample">Basic example</h3>
+
+<p>This section describes the application contained in the <em>ExampleApplication</em> file (loctated in the package ) in detail. To compile and run the example, simply select and apply the corresponding <a href="#run-cfgs">run configuration</a>. The application demonstrates the basics of Simulator X&#8217;s API in the context of a simple example that combines object creation and manipulation as well as input handling while using graphics and physics functionality. The resulting virtual scene shows <a href="#basic-example-render">a ball jumping on a rotating table</a> in the render window on startup. By pressing the <code>space</code> key one can spawn additional balls above the table. The position of the mouse inside the focused render output window is used to manipulate the viewing direction of the virtual camera, allowing a slight &#8220;look around&#8221;. In addition to the rendering output the application opens another window, containing a <a href="#basic-example-edit">graphical editor</a> for the simulation&#8217;s world state (that will be described later in this section). </p>
+
+<figure>
+<img src="figures/simx-be-render.png" alt="Rendering output of the basic example application." id="basic-example-render" title="basic-example-render" style="width:100%;" />
+<figcaption>Rendering output of the basic example application.</figcaption></figure>
+
+
+
+<figure>
+<img src="figures/simx-be-edit.png" alt="Graphical world state editor." id="basic-example-edit" title="basic-example-edit" style="width:100%;" />
+<figcaption>Graphical world state editor.</figcaption></figure>
+
+
+
+
+<h4 id="startingup">Starting Up</h4>
+
+<p>In the following the implementation of this example will be explained in detail. The source code of the example is located in the module <em>basicexamples</em> in the package <code>simx.applications.basicexamples</code>. The first important lines are the those:</p>
+
+<p><code>scala
+class ExampleApplication extends SimXApplication with JVRInit {
+  /*...*/
+}
+</code></p>
+
+<p>The starting point of the basic example applications is the class <code>ExampleApplication</code>, which extends the <code>SimXApplication</code> trait. This trait is provided to support the rapid implementation of simple applications like this example. It realizes one potential way to setup and run a Simulator X application. For this purpose it deals with common initialization and shutdown procedures internally and defines three interface methods for component- and content creation as well as for additional application logic. In addition to the <code>SimXApplication</code> trait, the second mixed in trait (<code>JVRInit</code>) initializes <em>OpenGL</em> for the utilized rendering component. It is of secondary importance for this example.</p>
+
+<h4 id="creatingcomponents">Creating Components</h4>
+
+<p>The first thing to do to fulfill the <code>SimXApplication</code> trait is to create the components that are required for the application. In this case there are a rendering component, a physics component and an editor. Simulator X already comes with several pre implemented components for typical tasks. These implementations are located in the <code>simx.components</code> package. The example uses the rendering component <code>JVRConnector</code> based on the open source java renderer <a href="http://cga200.beuth-hochschule.de/jVR/">jVR</a> implemented at the Beuth Hochschule für Technik Berlin, the physics component <code>JBulletComponent</code> based on the open source physics engine <a href="http://jbullet.advel.cz">JBullet</a> and the editor component <code>Editor</code> implemented directly for Simulator X: </p>
+
+<p>```scala
+val gfxName = Symbol(&#8220;renderer&#8221;)
+val physicsName = Symbol(&#8220;physics&#8221;)
+val editorName = Symbol(&#8220;editor&#8221;)</p>
+
+<p>protected def createComponents() {
+ println(&#8220;<a href="#creatingcomponents">Creating components</a>&#8221;)</p>
+
+<p>create(new JBulletComponent(physicsName))
+ create(new JVRConnector(gfxName))
+ create(new Editor(editorName))
+}
+```</p>
+
+<p>The method <code>createComponents</code> shown here implements the respective method defined in <code>SimXApplication</code>. It is the designated location for component creation. The method <code>create</code> is then used to create all desired components, by passing the component&#8217;s constructor (see the respective component documentation for details concerning alternative constructor parameters). The passed component name is a standard argument for components that can be used to reference the component later. It is extracted into a local value here to avoid error resulting of typos in component names. </p>
+
+<p>The use of the method <code>create</code> instead of a direct constructor call is necessary, inter alia, to guarantee a transparent interface for local as well as clustered applications. In the latter case it could be necessary to instantiate a component on a different machine. Without a direct constructor call a switch between a local and a distributed version of the application can be configured without changing the actual application code.</p>
+
+<p>One important consequence of this decoupling in terms of component creation is that the <code>create</code> method has no return value. As stated before, the creation of a component could lead to its instantiation on another machine. Following the paradigms of the <a href="http://dl.acm.org/citation.cfm?id=1624804">actor model</a> that underlies Simulator X, this could (in the case of a distributed application) happen asynchronously using message passing.
+To provide a convenient way of creating component and to give a example for advanced users (in the source code), the <code>SimXApplication</code> trait carries out every component creation request (using <code>create</code>) inside <code>createComponents</code> in parallel and then waits, until every component&#8217;s creation process is finished, before calling <code>configureComponents</code>. </p>
+
+<h4 id="configuringcomponents">Configuring Components</h4>
+
+<p>Most components need a separate configuration to run properly. This configuration can be arbitrarily altered (again) at runtime, in contrast to the component&#8217;s constructor arguments. Besides these configurations the execution scheme as well as inter component synchronization and miscellaneous application logic involving components may be configured.</p>
+
+<p>This example configures the rendering component to use a 800 x 600 px render window, to run with <em>low</em> shadow quality and no (<em>none</em>) mirror effects, to run at a target frame rate of 60 fps and to close the application if the render window is closed. The physics component is configured to apply gravity along the negative y-axis (<code>ConstVec3f(0, -9.81f, 0)</code>) and to run at a target frame rate of 60 fps as well. The configuration for the editor component simply sets the application name (used for example in the <a href="#basic-example-edit">graphical user interface</a>). Since the editor is a passive component, that solely reacts to value changes it does not need an <code>ExecutionStrategy</code>.</p>
+
+<p>```scala
+protected def configureComponents(components: immutable.Map[Symbol, Component]) {
+ println(&#8220;<a href="#configuringcomponents">Configuring components</a>&#8221;)</p>
+
+<p>components(gfxName) !
+ ConfigureRenderer(
+ BasicDisplayConfiguration(800, 600),
+ EffectsConfiguration(&#8220;low&#8221;,&#8220;none&#8221;)
+ )
+ start(ExecutionStrategy where components(gfxName) runs Soft(60))
+ exitOnClose(components(gfxName), shutdown _) // register for exit on close</p>
+
+<p>components(physicsName) ! PhysicsConfiguration (ConstVec3f(0, &#8211;9.81f, 0))
+ start(ExecutionStrategy where components(physicsName) runs Soft(60))</p>
+
+<p>components(editorName) ! EditorConfiguration(appName = &#8220;MasterControlProgram&#8221;)
+}
+```</p>
+
+<p>The described configuration is realized by implementing the <code>configureComponents</code> defined in the <code>SimXApplication</code> trait. This method is called after all component creation processes requested in <code>createComponents</code> are completely finished (see <a href="#creatingcomponents">Creating Components</a>). The results of the creation processes are available via <code>configureComponents</code>&#8217; parameter <code>components</code>. As a second consequence of the underlying <a href="http://dl.acm.org/citation.cfm?id=1624804">actor model</a>, the created components are actors themselves and results are references to their actor interface.</p>
+
+<p>To access single component references the component name is utilized. The actual configuration is then transferred to the component, using the <a href="http://dl.acm.org/citation.cfm?id=1624804">actor model</a>&#8217;s message passing operator <code>!</code> (see the component&#8217;s documentation for details on valid configuration messages).</p>
+
+<p>The execution scheme and the inter-component synchronization is configured using the <code>start</code> method and the <code>ExecutionStrategy</code> domain specific language (DSL from the <code>simx.core.components</code> package (see the respective documentation for details).</p>
+
+<p>The method <code>exitOnClose</code> provided by the <code>JVRInit</code> trait is used to logically connect the closing of the renderer window with the call of the <code>shutdown</code> method (from the <code>SimXApplication</code> trait) (This is a specific functionality of the utilized rendering component <code>JVRConnector</code> realized directly via message passing).</p>
+
+<h4 id="creatingentities">Creating Entities</h4>
+
+<p>After the successful creation and configuration of all desired components the objects of the simulation, so called <em>entities</em>, can be created. Besides visible objects other items, like lights, virtual cameras or input devices are considered to be entities in Simulator X. The creation of such entities is divided into two conceptional parts: The description of an entity defining all its desired properties and the realization of such an entity description (e.g. resulting in actual rendering or simulation). The description of entities itself is achieved by specifying a set of aspects for an entity, each intended to be realized by a specific component type. </p>
+
+<p>In the presented example application, three entities are created at startup: a table, a ball and a light. The ball has graphical, physical and naming aspects, that state the following (The descriptions of table and light are similar and not described here):</p>
+
+<ul>
+<li>Ball is an graphical object loaded from a (collada-) file with a specific scaling</li>
+<li>Ball is a physical sphere with a specific radius and position</li>
+<li>Ball is is named <em>the ball</em></li>
+</ul>
+
+<p>After the entities have been realized a respective command line output is generated.</p>
+
+<p>```scala
+private var tableEntityOption: Option[Entity] = None
+private val ballRadius = 0.2f
+private val ballPosition = ConstVec3f(0f, 1.5f, &#8211;7f)</p>
+
+<p>protected def createEntities() {
+ println(&#8220;<a href="#creatingentities">Creating entities</a>&#8221;)</p>
+
+<p>val ballDescription =
+ EntityDescription (
+ PhysSphere(
+ restitution = 0.998f,
+ transform = ballPosition,
+ radius = ballRadius
+ ),
+ ShapeFromFile(
+ file = &#8220;assets/vis/ball.dae&#8221;,
+ scale = ConstMat4f(Mat3x4f.scale(ballRadius*2f)),
+ transformation = ReadFromElseWhere
+ ),
+ NameIt(&#8220;the ball&#8221;)
+ )</p>
+
+<p>ballDescription.realize(entityComplete)
+ Light(&#8220;the light&#8221;, Vec3f(&#8211;4f, 8f, &#8211;7f), 270f, &#8211;25f, 0f).realize(entityComplete)
+ Table(&#8220;the table&#8221;, Vec3f(3f, 1f, 2f), Vec3f(0f, &#8211;1.5f, &#8211;7f)).realize((tableEntity: Entity) =&gt; {
+ entityComplete(tableEntity)
+ tableEntityOption = Some(tableEntity)
+ })
+}</p>
+
+<p>private def entityComplete(e: Entity) {println(&#8220;[Completetd entity] &#8221; + e)}
+```</p>
+
+<p>The described entity creation is implemented in <code>createEntities</code>, an interface method defined in <code>SimXApplication</code>. It is called directly after <code>configureComponents</code> finished.
+The description of the ball (stored in <code>ballDescription</code>) is created using the <code>EntityDescription</code> class. <code>EntityDescription</code>&#8217;s constructor directly realizes the concept of describing entities as set for aspects, by accepting an arbitrary number of <code>EntityAspect</code> objects. In the case of the ball description the physics aspect <code>PhysSphere</code>, the graphics aspect <code>ShapeFromFile</code> and the naming aspect <code>NameIt</code> are used (for details concerning available aspect implementations or their constructor parameters, see the respective documentation or the respective comments in the <code>simx.core.components</code>). These aspects are directly related to the functionality provided by the created components (e.g. <code>JVRConnector</code> or <code>JBulletComponent</code>).</p>
+
+<p>In order to create a ball entity from the <code>ballDescription</code> the method <code>realize</code> (from the <code>EntityDescription</code> class) is called. This call brings the components to realize the respective aspects and Simulator X to actually create the entity. Because components, Simulator X core functionality as well the example application itself are all implemented on-top of the actor <a href="http://dl.acm.org/citation.cfm?id=1624804">actor model</a> model and hence are realized by utilizing or rather being actors, this is achieved by message passing. Similar to the case of component creation, one consequence is that the result of <code>realize</code> is not immediately available. Thus, <code>realize</code> takes one function as parameter that handles the described entity once its realization is completed. In the example of the <code>ballDescription</code> the function <code>entityComplete</code> (a function that takes one entity and prints <em>[Completetd entity] &#8230;</em> to the console) is passed to <code>realize</code>.</p>
+
+<p>Similar to the ball, the light and the table are realized. Their <code>EntityDescription</code>s are sourced out to the classes <code>Light</code> and <code>Table</code>. By doing so these <code>EntityDescription</code> can easily be reused, while varying properties can be set via the constructor (e.g. the position). In addition to printing out a console message, the function passed to the <code>realize</code>-call on the table description stores the completed entity in a class variable for later use.</p>
+
+<p>The results of the three calls of <code>realize</code> in of components and output are:</p>
+
+<ul>
+<li>The ball and the table collada files are loaded by the renderer and displayed in the <a href="#basic-example-render">render output window</a></li>
+<li>The light is created by the renderer and the scene is lid accordingly</li>
+<li>The physical shapes of the ball and the table are loaded by the physics component and simulated accordingly (the table is a static object - mass = 0 - that is not affected by gravity)</li>
+<li>Due to the combination of physical and graphical aspects in one <code>EntityDescription</code>, the position and orientation of the ball (and the table) calculated by the physics component&#8217;s simulation are shared with the rendering component. This results in the display of the ball jumping on the table in the render output window.</li>
+<li>The created entities are listed in the <a href="#basic-example-edit-2">editor GUI</a> according to their <code>NameIt</code> aspect</li>
+</ul>
+
+<p>Note: The order in which the realized entity descriptions are completed (resulting in the actual entity) is not predetermined (due to the underlying <a href="http://dl.acm.org/citation.cfm?id=1624804">actor model</a> and the implementation of the process in Simulator X). Related messages are sent and processed asynchronously and in parallel.</p>
+
+<h4 id="settingupadditionalapplicationlogic">Setting up additional application logic</h4>
+
+<p>Now that all initially required entities are created, the application window shows a ball jumping on a table. In this state, the application does not provide any possibility of interaction or manipulation by the user (except of using the editor) yet. In order to implement such <em>application logic</em>, the <code>SimXApplication</code> trait defines one additional method that is call right after entity creation and is designated for the realization of any additional requirement. Note that this approach of realizing <em>application logic</em> is only suitable for small and simple applications. If things become more complex other approaches, e.g.\ like creating own dedicated components, should be used (see the documentation dealing with the creation of components).</p>
+
+<p>In the presented example application three additional behaviors are implemented:</p>
+
+<ul>
+<li>The continuous animation (i.e. rotation) of the table.</li>
+<li>The spawning of new balls as reaction to a key press.</li>
+<li>A simple camera look around using the mouse.</li>
+</ul>
+
+<p>These examples showcase the following basic operations:</p>
+
+<ul>
+<li>Access of entity properties, so called <em>state variables</em></li>
+<li>Manipulation of <em>state variables</em></li>
+<li>Scheduling of jobs</li>
+<li>Reaction to the change of <em>state variables</em></li>
+<li>Creation and removal of entities in general</li>
+<li>Access of input device data (here keyboard and mouse)</li>
+</ul>
+
+<p><code>scala
+protected def finishConfiguration() {
+  println(&quot;[Configuring application]&quot;)
+  rotateTable()
+  initializeBallSpawning()
+  initializeMouseControl()
+  println(&quot;[Application is running] Press SPACE to spawn new balls!&quot;)
+}
+</code></p>
+
+<p>The described behaviors are setup inside <code>finishConfiguration</code>, an interface method provided by the <code>SimXApplication</code> trait. <code>finishConfiguration</code> is called right after <code>createEntities</code> from within the <code>SimXApplication</code> trait. For this example application the implementations of the described behaviors are sourced out into the methods <code>rotateTable</code>, <code>initializeBallSpawning</code> and <code>initializeMouseControl</code>.</p>
+
+<p>```scala
+private def rotateTable() {
+ addJobIn(16L, () =&gt; {
+ tableEntityOption.collect{ case tableEntity =&gt; {
+ val transformationSVar = tableEntity.get(types.Transformation).head
+ transformationSVar.get(
+ (currentTransform) =&gt; {transformationSVar.set(rotate(currentTransform))})
+ }}
+ rotateTable()
+ })
+}</p>
+
+<p>private def rotate(mat: ConstMat4f) = mat * ConstMat4f(Mat3x4f.rotateY(0.01f))
+```</p>
+
+<p>The fist method, <code>rotateTable</code>, implements the continuous animation (i.e. rotation) of the table. Animations like this typically require a kind of loop, that continuously updates the object&#8217;s properties (e.g. its orientation) dependent of the time that passed since the last update. Here this loop is realized by utilizing a recursive approach as well as the job scheduling method <code>addJobIn</code> provided by the trait <code>SVarActor</code> via <code>SimXApplication</code>.</p>
+
+<p>A call of <code>rotateTable</code> does only one thing: It schedules a job, that is to be carried out in 16 milliseconds. To do so two parameters are passed <code>addJobIn</code> to <code>addJobIn</code>: </p>
+
+<ul>
+<li>The <code>Long</code> &#8220;16&#8221;, defining when the job is to be carried out and</li>
+<li>an anonymous <code>Function0[Unit]</code> (or using another Scala syntax <code>() =&gt; Unit</code>), a function that takes no parameters and has no return value, defining the job itself.</li>
+</ul>
+
+<p>When the scheduled job is finally carried out after 16 milliseconds (see the documentation of the underlying <code>SVarActor</code> implementation for details), the passed anonymous function is called. This function then applies two steps: An update of the table&#8217;s orientation and the scheduling of the next update. </p>
+
+<p>In order to update the table&#8217;s orientation the member variable <code>tableEntityOption</code> (see <a href="#creatingentities">Creating Entities</a>) is checked. If it is defined, i.e. the realization of the table has already been completed, the <em>state variable</em> containing the table entity&#8217;s position and orientation is retrieved. This is done by passing the respective identifier for the property of interest (<code>types.Transformation</code>) to the <code>get</code> method of the <code>tableEntity</code>. Since the entity could contain more than one property of the type <code>Transformation</code>, <code>get</code> returns a collection of <em>state variables</em>. However this example implicitly requires that there is only one <code>Transformation</code>. Thus the first resulting <em>state variable</em> is selected via the method <code>head</code> (<em>In more complex applications it is reasonable to check if the list is not empty, rather than just call <code>head</code></em>). This single result (<code>transformationSVar</code>) is an instance of the class <code>SVar</code>, that can be used to retrieve and manipulate this entity property or to react to its changes (see the documentation of the <em>state variable</em> concept for details). Here a combination of retrieval and subsequent manipulation is used: First the current value of the table&#8217;s position and orientation (a transformation matrix) is retrieved via the method <code>get</code>. Since this retrieval may require the exchange of messages between underlying actors, its result cannot be processed directly. Instead a function has to be passed, defining what to to with the value (in the example <code>currentTransform</code>) once it is available (see the documentation of the <em>state variable</em> concept for details). Then, this function uses <code>currentTransform</code> to apply a very simple update operation (sourced out to <code>rotate</code>) and to manipulate the table&#8217;s transformation <em>state variable</em> <code>transformationSVar</code> via its method <code>set</code> accordingly.</p>
+
+<p>After this update of the table&#8217;s orientation (in fact after the request of the current transformation and the definition of what to do with it when its available via <code>get</code>) the method <code>rotateTable</code> is called in order to schedule the next update in 16 milliseconds. The overall result is that the orientation of the table is altered every 16 milliseconds. Since these updates are passed to the respective <em>state variable</em> of the table&#8217;s entity, components that are responsible for the realization of an aspect (see Creating Entities][]) of this entity can react to this changes. In the context of this example the previously created rendering component can update its internal representation (e.g. its scenegraph) to render the rotated table. Note that the connection between the table entity and the rendering component is established because of the inclusion of the <code>ShapeFromFile</code> aspect into the entity&#8217;s <code>EntityDescription</code>.</p>
+
+<p>```scala
+private def initializeBallSpawning() {
+ handleDevice(types.Keyboard)( (keyboardEntity) =&gt; {
+ val spaceSVar = keyboardEntity.get(types.Key_Space).head
+ spaceSVar.observe( (pressed) =&gt; {if(pressed) spawnBall()} )
+ })
+}</p>
+
+<p>private var ballCounter = 0</p>
+
+<p>private def spawnBall() {
+ ballCounter += 1
+ val randomOffset = Vec3f(Random.nextFloat(), Random.nextFloat(), Random.nextFloat()) * 0.05f
+ Ball(&#8220;ball#&#8221; + ballCounter, ballRadius, ballPosition + randomOffset).realize( (newBallEntity) =&gt; {
+ val transformationSVar = newBallEntity.get(types.Transformation).head
+ transformationSVar.observe( (newTransform) =&gt; {
+ if(extractHeight(newTransform) &lt; &#8211;2f) newBallEntity.remove()
+ })
+ })
+}</p>
+
+<p>private def extractHeight(mat: ConstMat4f) = mat.m13
+```</p>
+
+<p>The second method, <code>initializeBallSpawning</code>, implements the spawning of new balls as reaction to a key press. Two main steps have to be taken here:</p>
+
+<ul>
+<li>Access of the data coming from the keyboard, i.e. the keyboard&#8217;s current state</li>
+<li>and the definition of a reaction to the change of this state.</li>
+</ul>
+
+<p>Data coming from input devices, like a keyboard or a mouse, are represented in the same manner as other objects of the simulation: They are represented by entities. In the case of the keyboard the corresponding representation is an entity containing <em>state variables</em> for every keyboard key. An entity representing an input device usually has not to be created from within an application. This is typically done by an component that is able to provide such data. In this case the rendering component can tab key presses and mouse movements inside the rendering window and provide it to the application via entities. To grant other software parts (like the this application code) access to this entities, they are registered globally (see the <em>worldinterface</em> documentation). </p>
+
+<p>The look-up of registered entities is carried out by the method <code>handleDevice</code> provided by the <code>IORegistryHandling</code> trait via <code>SimXApplication</code>. By passing the identifier <code>types.Keyboard</code> the respective entity is requested (in the same manner as the access of entity properties). The underlying mechanism carries out the necessary message passing and takes care of temporal dependancies: If for example the keyboard entity is requested is before the rendering component finished its creation, the response is simple postponed until its available. Similar to the access of <em>state variables</em> values, the result of this request cannot be used directly. Instead <code>handleDevice</code> requires a function, as a parameter, that defines what to to with the result.</p>
+
+<p>Here this function uses the result of the request, the <code>keyboardEntity</code>, to retrieve its <em>state variable</em> <code>spaceSVar</code> representing the space key (see the description of <code>rotateTable</code> in the previous paragraph for details). The <em>state variable</em>&#8217;s method <code>observe</code> is then used to register a reaction to value changes. This is done by passing a function that takes this value a parameter and defines what to in consequence of a value change. In the case of the <code>spaceSVar</code> this function takes one <code>Boolean</code> parameter <code>pressed</code>. The function body then checks if <code>pressed</code> is <code>true</code>. This means, the space key state changed and is now is pressed. In this case the method <code>spawnBall</code> is called.</p>
+
+<p><code>spawnBall</code> carries out the actual reaction to the key press: It creates a new ball entity and handles it removal. To create a new ball the sourced out <code>EntityDescription</code> <code>Ball</code> is used (see <a href="#creatingentities">Creating Entities</a>). In order to prevent the balls from spawning at the exact same position a slight <code>randomOffset</code> is utilized. Furthermore the ball&#8217;s names are appended by a consecutively numbering.</p>
+
+<p>After the creation of the new ball entity is completed a reaction to changes of the balls position is registered. This is done by passing a respective anonymous function to <code>realize</code>. Using the same mechanisms as for the observation of the space key, a reaction the the changes of the ball&#8217;s position (contained in its <code>transformationSVar</code>) is defined: If the ball&#8217;s new hight falls below a defined value it is to be removed. In the context of the example the method <code>extractHeight</code> extracts the hight of the ball from its transformation matrix, using the table&#8217;s 3D-model orientation to derive that the y-axis is pointing up. The threshold value <code>-2f</code> is used to determine balls that fell slightly below the table&#8217;s top. If a ball&#8217;s position is determined to be &#8220;too low&#8221;, the method <code>remove</code> is called on the corresponding entity. This call leads to the notification of all involved components as well as to the removal of all <em>state variable</em> data. In this example the rendering-, physics-, naming- and editor component will remove the ball from their internal representation.</p>
+
+<p>```scala
+private var userEntityOption: Option[Entity] = None</p>
+
+<p>private def initializeMouseControl() {
+ handleDevice(types.User)( (userEntity) =&gt; userEntityOption = Some(userEntity))
+ handleDevice(types.Mouse)( (mouseEntity) =&gt; {
+ val positionSVar = mouseEntity.get(types.Position2D).head
+ positionSVar.observe{ case newMousePosition =&gt; {
+ userEntityOption.collect{ case userEntity =&gt;
+ val viewplattformTransformationSvar = userEntity.get(types.ViewPlatform).head
+ viewplattformTransformationSvar.set(calculateView(newMousePosition))
+ }
+ }}
+ })
+}</p>
+
+<p>private def calculateView(mousePos: ConstVec2f) = {
+ val weight = 0.1f
+ val angleHorizontal = ((mousePos.x - 400f) / &#8211;400f) * weight
+ val angleVertical = ((mousePos.y - 300f) / &#8211;300f) * weight
+ ConstMat4f(Mat3x4f.rotateY(angleHorizontal).rotateX(angleVertical))
+}
+```</p>
+
+<p>The third method, <code>initializeMouseControl</code>, implements a simple camera look around using the mouse. It uses the same approach and mechanisms as the two previous behavior implementations in order to react to mouse movement by manipulating the virtual camera&#8217;s orientation.</p>
+
+<p>Like the <code>keyboardEntity</code> before the entity <code>userEntity</code>, representing the virtual camera (TODO: Why is this retrieved via handeleDEVICE?), and the entity <code>mouseEntity</code>, representing data coming from the mouse, are requested by utilizing the method <code>handleDevice</code>. The following is done with the requested entities, when they are available.</p>
+
+<p><code>userEntity</code> is stored in the local variable <code>userEntityOption</code> for later use. <code>mouseEntity</code> is utilized to access the <em>state variable</em> <code>positionSVar</code>, representing the mouse&#8217;s current position inside the rendering window, via the identifier <code>types.Position2D</code>. By applying <code>positionSVar</code>&#8217;s <code>observe</code> method a reaction to a change of the mouse position is then registered:</p>
+
+<p>If <code>userEntityOption</code> is defined, i.e. the request for <code>userEntity</code> has already been answered, its <em>state variable</em>, representing the virtual camera&#8217;s position and orientation, is accessed via <code>types.ViewPlatform</code> and is then <code>set</code> to a new orientation depending on the <code>newMousePosition</code>. The calculation of the new orientation is sourced out to <code>calculateView</code>, a pragmatic implementation that is of no further relevance. The result of this &#8220;reaction-definition&#8221; is, that the camera view slightly rotates in the direction of the mouse, if it is moved from the center of the window to the border.</p>
+
+<h4 id="startingtheapplication">Starting the application</h4>
+
+<p>Now, all initially required entities are now created and additional <em>application logic</em> is set up. To actually start the application the <code>SimXApplicationMain</code> trait is used. It provides a convenient interface to start Simulator X applications and requires the constructor of one actor to be initially started. In case of the presented example this actor is <code>ExampleApplication</code>. Since <code>ExampleApplication</code> derives from <code>SimXApplication</code> it is a <code>SVarActor</code>, implemented to setup the application as described above at startup.</p>
+
+<p><code>scala
+object ExampleApplication extends SimXApplicationMain( new ExampleApplication )
+</code></p>
+
+<p>The <code>SimXApplicationMain</code> trait solely contains a <code>main</code>-Method and is equal to the following written out object:</p>
+
+<p><code>scala
+object ExampleApplicationMain {
+  def main(args : Array[String]){
+    SVarActor.createActor(new ExampleApplication)
+  }
+}
+</code></p>
+
+<p>When running the application two windows should appear as described in the initial paragraph of the <a href="#basicexample">Basic example</a>: A rendering output window as well as a <a href="#basic-example-edit">graphical editor</a>.</p>
+
+<h4 id="usingtheeditor">Using the Editor</h4>
+
+<p>The editor is designed to provide a graphical user interface for the manipulation of the world state during runtime. All created entities (see previous sections) are displayed in a tree view on <a href="#basic-example-edit-2">the left side of the editor window</a>. </p>
+
+<figure>
+<img src="figures/simx-be-edit-2.png" alt="Entities displayed by the graphical world state editor." id="basic-example-edit-2" title="basic-example-edit-2" style="width:100%;" />
+<figcaption>Entities displayed by the graphical world state editor.</figcaption></figure>
+
+
+
+<p>By expanding entities in the tree view, a list of all their <em>state variables</em> can be accessed. The names displayed for these <em>state variables</em> correspond to the identifiers used in the code. If a specific <em>state variable</em> is selected in the tree view, two corresponding views become visible on <a href="#basic-example-edit-3">the right side of the editor window</a>: </p>
+
+<ul>
+<li>One view, on the top, to set the value of this state variable</li>
+<li>and one view, on the bottom, that displays its current value.</li>
+</ul>
+
+<figure>
+<img src="figures/simx-be-edit-3.png" alt="Viewing and setting state variable values using the graphical world state editor." id="basic-example-edit-3" title="basic-example-edit-3" style="width:100%;" />
+<figcaption>Viewing and setting <em>state variable</em> values using the graphical world state editor.</figcaption></figure>
+
+
+
+<p>These views are dependent on the <em>state variable</em>&#8217;s type and semantics. If the top view is used to alter the <em>state variable</em>&#8217;s current value, the new value is passed directly to the running application. This is realized by using <code>SVar</code>&#8217;s method <code>set</code>, just like in the application&#8217;s implementation.</p>
+
+<h3 id="clusterexample">Cluster example</h3>
+
+<p>The cluster example showcases a distributed system setup where Simulator X is used to transparently handle bootstrapping, communication and synchronization&#8230;</p>
+
+<p>The package cluster contains several examples using the clustering sub system of Simulator X.</p>
+
+<p>The package syncgroup contains an example that shows how the sync groups in Simulator X work.</p>
+
+<p><a href="./simx-ReadMe.html">Back to Read Me</a></p>
+
+</body>
+</html>

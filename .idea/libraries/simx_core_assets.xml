@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="simx-core-assets">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/core/assets/simx-core-assets.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

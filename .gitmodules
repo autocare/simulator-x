@@ -1,0 +1,24 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/simulator-x/core.git
+[submodule "applications/basicexamples"]
+	path = applications/basicexamples
+	url = https://github.com/simulator-x/basicexamples.git
+[submodule "components/editor"]
+	path = components/editor
+	url = https://github.com/simulator-x/editor.git
+[submodule "components/sound/lwjgl-sound"]
+	path = components/sound/lwjgl-sound
+	url = https://github.com/simulator-x/lwjgl-sound.git
+[submodule "components/physics/jbullet"]
+	path = components/physics/jbullet
+	url = https://github.com/simulator-x/jbullet-physics.git
+[submodule "components/renderer/jvr"]
+	path = components/renderer/jvr
+	url = https://github.com/simulator-x/jvr-rendering.git
+[submodule "components/ontology/generating"]
+	path = components/ontology/generating
+	url = https://github.com/simulator-x/ontologygen.git
+[submodule "components/io/vrpn"]
+	path = components/io/vrpn
+	url = https://github.com/simulator-x/vrpn-io.git
