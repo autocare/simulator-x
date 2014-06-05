@@ -1,9 +1,6 @@
 [submodule "core"]
 	path = core
 	url = https://github.com/simulator-x/core.git
-[submodule "applications/basicexamples"]
-	path = applications/basicexamples
-	url = https://github.com/simulator-x/basicexamples.git
 [submodule "components/editor"]
 	path = components/editor
 	url = https://github.com/simulator-x/editor.git
