@@ -22,3 +22,6 @@
 [submodule "components/io/vrpn"]
 	path = components/io/vrpn
 	url = https://github.com/simulator-x/vrpn-io.git
+[submodule "applications/examples/basic"]
+	path = applications/examples/basic
+	url = https://github.com/simulator-x/basicexamples.git

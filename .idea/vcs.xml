@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/applications/basicexamples" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/io/vrpn" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/ontology/generating" vcs="Git" />
