@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Example Application" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="simx.applications.examples.basic.ExampleApplication" />
-    <option name="VM_PARAMETERS" value="-Xmx2g -Xms1g" />
+    <option name="VM_PARAMETERS" value="-Xmx2g -Xms1g -XX:MaxPermSize=128m" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/applications/examples/basic" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />

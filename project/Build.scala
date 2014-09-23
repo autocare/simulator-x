@@ -6,12 +6,12 @@ object SirisProductionBuild extends Build {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "The Siris Team",
     version := "1.0",
-    scalaVersion := "2.11.0"
+    scalaVersion := "2.11.2"
   )
 
   val simxBase = file(".")
   //TODO: Check for thread safety in unusual cases(e.g. when compiling multiple SimXApplications at once)
-  var workingDirectory: File = file(".")
+  var workingDirectory: Option[File] = None
 
   lazy val generateOntology = taskKey[Unit]("Generates the ontology for the current SimX application project.")
   lazy val ontologyGen = Project(
@@ -19,12 +19,13 @@ object SirisProductionBuild extends Build {
     base = file( "components/ontology/generating"),
     settings = buildSettings ++ Seq(
       generateOntology := {
-        toError((runner in Compile).value.run(
-          mainClass = mainClass.value.getOrElse(throw new Exception("No 'mainClass' defined in build.sbt.")),
-          classpath = (fullClasspath in Compile).value.map(_.data),
-          options = Seq(simxBase.getAbsolutePath, workingDirectory.getAbsolutePath), //program arguments
-          log = streams.value.log)
-        )
+        if(workingDirectory.isDefined)
+          toError((runner in Compile).value.run(
+            mainClass = mainClass.value.getOrElse(throw new Exception("No 'mainClass' defined in build.sbt.")),
+            classpath = (fullClasspath in Compile).value.map(_.data),
+            options = Seq(simxBase.getAbsolutePath, workingDirectory.get.getAbsolutePath), //program arguments
+            log = streams.value.log)
+          )
       }
   ))
 
@@ -47,7 +48,7 @@ object SirisProductionBuild extends Build {
 
   object SimXApplication {
   	def apply(id: String, base: File) = Project(id, base, settings = buildSettings ++ Seq(
-      setOntoDir := {workingDirectory = baseDirectory.value},
+      setOntoDir := {workingDirectory = Some(baseDirectory.value)},
       (compile in Compile) <<= (compile in Compile) dependsOn setOntoDir
     ))
   }
@@ -73,6 +74,6 @@ object SirisProductionBuild extends Build {
                               dependsOn(core, jbullet, jvr, lwjgl_sound, editor, vrpn).
                               aggregate(core, jbullet, jvr, lwjgl_sound, editor, vrpn)
   /* Documentation */
-  lazy val doc            = SimXComponent ( id = "doc", 		           base = file( "doc")).
+  lazy val documentation  = SimXApplication ( id = "doc", 		           base = file( "doc")).
                               dependsOn( core, jbullet, jvr, lwjgl_sound, vrpn, basicexamples )
 }
