@@ -51,12 +51,7 @@ Simulator X runs on the Java Virtual Machine (JVM). It is compatible with Oracle
 To compile and run Simulator X you need the Java Development Kit (JDK) to be installed on you system and your _path_ environment to be configured to contain your JDK's _bin_ folder (_E.g. you should be able to execute `java` and `javac` in a terminal if your configuration is right._).
 
 ### IntelliJ
-The repository of Simulator X obtained from GitHub contains a preconfigured IntelliJ project as a easy starting point for the development own applications. In order to use this configuration you need to install at least the free community version of JetBrain's IDE [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) as well as the plugins _SBT_ and _scala_ (see JetBrain's [plugin page](http://www.jetbrains.com/idea/plugins/index.html) for a how-to). The IvyIDEA Plugin has to be configured to use the [default ivy settings](#ivy-default).
-
-![default ivy settings][ivy-default]
-
-[ivy-default]: ./figures/IvyIDEA-settings.png "IvyIDEA-settings" width="100%"
-
+The repository of Simulator X obtained from GitHub contains a preconfigured IntelliJ project as a easy starting point for the development own applications. In order to use this configuration you need to install at least the free community version of JetBrain's IDE [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) as well as the plugins _SBT_ and _scala_ (see JetBrain's [plugin page](http://www.jetbrains.com/idea/plugins/index.html) for a how-to).
 
 ## Setting up the project
 

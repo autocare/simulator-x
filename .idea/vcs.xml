@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/applications/examples/basic" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/io/vrpn" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/components/ontology/generating" vcs="Git" />
@@ -11,4 +13,3 @@
     <mapping directory="$PROJECT_DIR$/core" vcs="Git" />
   </component>
 </project>
-

@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/editor/editor.iml" filepath="$PROJECT_DIR$/components/editor/editor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/applications/examples/basic/examples-basic.iml" filepath="$PROJECT_DIR$/applications/examples/basic/examples-basic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/physics/jbullet/jbullet.iml" filepath="$PROJECT_DIR$/components/physics/jbullet/jbullet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/renderer/jvr/jvr.iml" filepath="$PROJECT_DIR$/components/renderer/jvr/jvr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/sound/lwjgl-sound/lwjgl-sound.iml" filepath="$PROJECT_DIR$/components/sound/lwjgl-sound/lwjgl-sound.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/ontology/generating/ontology-generator.iml" filepath="$PROJECT_DIR$/components/ontology/generating/ontology-generator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/io/vrpn/vrpn.iml" filepath="$PROJECT_DIR$/components/io/vrpn/vrpn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.iml" filepath="$PROJECT_DIR$/.idea/modules/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-build.iml" filepath="$PROJECT_DIR$/.idea/modules/core-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doc.iml" filepath="$PROJECT_DIR$/.idea/modules/doc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doc-build.iml" filepath="$PROJECT_DIR$/.idea/modules/doc-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/editor.iml" filepath="$PROJECT_DIR$/.idea/modules/editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/editor-build.iml" filepath="$PROJECT_DIR$/.idea/modules/editor-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples-basic.iml" filepath="$PROJECT_DIR$/.idea/modules/examples-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples-basic-build.iml" filepath="$PROJECT_DIR$/.idea/modules/examples-basic-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jbullet.iml" filepath="$PROJECT_DIR$/.idea/modules/jbullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jbullet-build.iml" filepath="$PROJECT_DIR$/.idea/modules/jbullet-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvr.iml" filepath="$PROJECT_DIR$/.idea/modules/jvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jvr-build.iml" filepath="$PROJECT_DIR$/.idea/modules/jvr-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lwjgl_sound.iml" filepath="$PROJECT_DIR$/.idea/modules/lwjgl_sound.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lwjgl_sound-build.iml" filepath="$PROJECT_DIR$/.idea/modules/lwjgl_sound-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ontology-generator.iml" filepath="$PROJECT_DIR$/.idea/modules/ontology-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ontology-generator-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ontology-generator-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vrpn.iml" filepath="$PROJECT_DIR$/.idea/modules/vrpn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vrpn-build.iml" filepath="$PROJECT_DIR$/.idea/modules/vrpn-build.iml" />
     </modules>
   </component>
 </project>
-

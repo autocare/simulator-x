@@ -23,7 +23,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/components/sound/lwjgl-sound/lib/lwjgl-2.6/jar/lwjgl-debug.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/components/sound/lwjgl-sound/lib/lwjgl-2.6/jar/jinput.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/components/sound/lwjgl-sound/lib/lwjgl-2.6/jar/AppleJavaExtensions.jar" path-in-jar="/" />
-      <element id="library" level="project" name="JOGL 2.0" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/scala/scala-2.9.2/lib/scala-swing.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/components/physics/jbullet/lib/jbullet/jbullet.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/components/physics/jbullet/lib/jbullet/vecmath.jar" path-in-jar="/" />
