@@ -55,8 +55,5 @@ object SimXProductionBuild extends SimXBuildBase{
     dependsOn(core, jbullet, jvr, lwjgl_sound, editor, vrpn, gui, atn, feature, j4k, leapmotion).
     aggregate(core, jbullet, jvr, lwjgl_sound, editor, vrpn, gui, atn, feature, j4k, leapmotion)
 
-  lazy val mmiexamples		  = SimXApplication ( id = "examples-mmi",        base = file( "applications/examples/mmi")).
-    dependsOn(core, jvr, jbullet, editor, vrpn, feature, atn, j4k, leapmotion, gui).
-    aggregate(core, jvr, jbullet, editor, vrpn, feature, atn, j4k, leapmotion, gui)
 }
 
