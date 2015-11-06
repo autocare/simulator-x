@@ -37,3 +37,6 @@
 [submodule "components/io/j4k"]
 	path = components/io/j4k
 	url = git@github.com:simulator-x/kinect.git
+[submodule "components/renderer/gui"]
+	path = components/renderer/gui
+	url = git@github.com:simulator-x/rendering-gui.git
