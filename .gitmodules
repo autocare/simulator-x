@@ -24,19 +24,19 @@
 	url = https://github.com/simulator-x/basicexamples.git
 [submodule "components/io/leapmotion"]
 	path = components/io/leapmotion
-	url = git@github.com:simulator-x/leapmotion.git
+	url = https://github.com/simulator-x/leapmotion.git
 [submodule "applications/examples/ai"]
 	path = applications/examples/ai
-	url = git@github.com:simulator-x/examples-ai.git
+	url = https://github.com/simulator-x/examples-ai.git
 [submodule "components/ai/atn"]
 	path = components/ai/atn
-	url = git@github.com:simulator-x/atn.git
+	url = https://github.com/simulator-x/atn.git
 [submodule "components/ai/feature"]
 	path = components/ai/feature
-	url = git@github.com:simulator-x/feature.git
+	url = https://github.com/simulator-x/feature.git
 [submodule "components/io/j4k"]
 	path = components/io/j4k
-	url = git@github.com:simulator-x/kinect.git
+	url = https://github.com/simulator-x/kinect.git
 [submodule "components/renderer/gui"]
 	path = components/renderer/gui
-	url = git@github.com:simulator-x/rendering-gui.git
+	url = https://github.com/simulator-x/rendering-gui.git
