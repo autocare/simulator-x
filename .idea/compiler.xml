@@ -18,6 +18,23 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="atn" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="doc" target="1.8" />
+      <module name="editor" target="1.8" />
+      <module name="examples-ai" target="1.8" />
+      <module name="examples-basic" target="1.8" />
+      <module name="feature" target="1.8" />
+      <module name="gui" target="1.8" />
+      <module name="j4k" target="1.8" />
+      <module name="jbullet" target="1.8" />
+      <module name="jvr" target="1.8" />
+      <module name="leapmotion" target="1.8" />
+      <module name="lwjgl_sound" target="1.8" />
+      <module name="ontology-generator" target="1.8" />
+      <module name="vrpn" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-Xlint:unchecked -source 1.8 -target 1.8 -Xlint:unchecked" />
