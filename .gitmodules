@@ -40,3 +40,12 @@
 [submodule "components/renderer/gui"]
 	path = components/renderer/gui
 	url = https://github.com/simulator-x/rendering-gui.git
+[submodule "components/io/json"]
+	path = components/io/json
+	url = https://github.com/simulator-x/json.git
+[submodule "applications/examples/unity"]
+	path = applications/examples/unity
+	url = https://github.com/simulator-x/examples-unity
+[submodule "components/renderer/unity"]
+	path = components/renderer/unity
+	url = https://github.com/simulator-x/unity-rendering
