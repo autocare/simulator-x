@@ -1,0 +1,6 @@
+.sbt.ivy.lock
+cache
+.sbt.cache.lock
+__MACOSX
+cache.zip
+*~
