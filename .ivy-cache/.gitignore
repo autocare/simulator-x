@@ -4,3 +4,5 @@ cache
 __MACOSX
 cache.zip
 *~
+exclude_classifiers
+exclude_classifiers.lock
