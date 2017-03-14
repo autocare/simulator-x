@@ -1,3 +1,12 @@
+# Other versions
+
+This is the latest version of _Simulator X_ available under the _Apache License, Version 2.0_. If you want to use _Simulator X_ for research or teaching and are interested in (later) versions that we use internally, then contact us. This versions are hosted on our institut's GitLab server together with additional material that we use for teaching, such as how-tos and practical exercises.  
+Getting access is as easy as sending your type of interest as well as a mail address for registration to one of the following contacts:
+
+- [Chris Zimmerer](http://www.hci.uni-wuerzburg.de/people/chris.html)
+- [Martin Fischbach](http://www.hci.uni-wuerzburg.de/people/martin.html)
+- [Dennis Wiebusch](https://www.uni-ulm.de/in/psy-acog/team/dennis-wiebusch/)
+
 # Getting Started with Simulator X
 
 - Install JDK (Version 1.8)
